@@ -5,8 +5,6 @@ const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/social-netwo
 mongoose.connect(MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    useFindAndModify: false,
-    useCreateIndex: true
 });
 
 const db = mongoose.connection;
@@ -17,3 +15,4 @@ db.once('open', () => {
 });
 
 module.exports = db;
+
